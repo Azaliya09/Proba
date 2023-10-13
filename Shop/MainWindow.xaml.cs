@@ -12,6 +12,8 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using Shop.Base;
+using Shop.Components;
 
 namespace Shop
 {
@@ -23,6 +25,11 @@ namespace Shop
         public MainWindow()
         {
             InitializeComponent();
+            IEnumerable<Product> ListWithItem = App.db.Product;
+            foreach (var service in ListWithItem)
+            {
+                ServicesWp.Children.Add(new ProductUserControl(service));
+            }
         }
     }
 }

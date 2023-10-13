@@ -5,6 +5,7 @@ using System.Data;
 using System.Linq;
 using System.Threading.Tasks;
 using System.Windows;
+using Shop.Base;
 
 namespace Shop
 {
@@ -13,5 +14,6 @@ namespace Shop
     /// </summary>
     public partial class App : Application
     {
+        public static HardwareShop_azaliyaEntities db = new HardwareShop_azaliyaEntities();
     }
 }
