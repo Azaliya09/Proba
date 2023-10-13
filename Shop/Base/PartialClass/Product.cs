@@ -30,6 +30,21 @@ namespace Shop.Base
             }
         }
 
+        public double OverideFeedback
+        {
+            get
+            {
+                double sum = 0;
+
+                foreach(var item in Feedback)
+                {
+                    sum += item.Evaluation;
+                }
+
+                return sum / Feedback.Count;
+            }
+        }
+
         
     }
 }

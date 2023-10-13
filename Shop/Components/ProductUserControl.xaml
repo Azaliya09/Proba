@@ -22,7 +22,7 @@
             <Image Margin="5,5,5,1" x:Name="ImageImg" Source="/Resources/love.png" />
             <TextBlock x:Name="TitleTb" TextWrapping="Wrap" Margin="0,0,0,1" Grid.Row="1" />
             <StackPanel Grid.Row="2" Orientation="Horizontal" Margin="0,0,0,4">
-                <TextBlock  x:Name="RaitingTb"></TextBlock>
+                <TextBlock  x:Name="EvolutionTb"></TextBlock>
             </StackPanel>
             <StackPanel Grid.Row="3" Orientation="Horizontal" Margin="0,0,0,45" Grid.RowSpan="2">
                 <TextBlock x:Name="CostTb" FontWeight="Bold" FontSize="24" VerticalAlignment="Center"></TextBlock>
