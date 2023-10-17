@@ -26,7 +26,7 @@ namespace Shop.Components
             InitializeComponent();
 
             TitleTb.Text = product.Title;
-            EvolutionTb.Text = product.OverideFeedback.ToString("N2");
+            EvolutionTb.Text = product.OverideFeedback;
             CostTb.Text = product.CostDiscount.ToString("N0") + " ₽ ";
             CostTimeTb.Visibility = product.CostVisibility;
             CostTimeTb.Text = product.Cost.ToString("N0");
