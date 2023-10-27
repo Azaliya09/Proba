@@ -7,8 +7,34 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
     <Grid>
-        <ScrollViewer HorizontalScrollBarVisibility="Disabled" Grid.Row="1">
-            <WrapPanel x:Name="ServicesWp"/>
-        </ScrollViewer>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="69*"/>
+            <RowDefinition Height="449*"/>
+            <RowDefinition Height="16*"/>
+        </Grid.RowDefinitions>
+        <Image x:Name="LogoImage" HorizontalAlignment="Center" Grid.Row="0" VerticalAlignment="Center" ></Image>
+
+        <Button Width="100" Height="30" HorizontalAlignment="Left" Margin="15" x:Name="AuthBtn" Click="AuthBtn_Click">Авторизация
+            <Button.Resources>
+                <Style TargetType="Border">
+                    <Setter Property="CornerRadius" Value="5"/>
+                </Style>
+            </Button.Resources>
+        </Button>
+        <Button Width="100" Height="30" HorizontalAlignment="Left" Margin="15" x:Name="ExitBtn" Visibility="Collapsed">Выйти
+            <Button.Resources>
+                <Style TargetType="Border">
+                    <Setter Property="CornerRadius" Value="5"/>
+                </Style>
+            </Button.Resources>
+        </Button>
+
+        <Frame x:Name="MainFrame" Grid.Row="1" NavigationUIVisibility="Hidden" />
+        <StackPanel Grid.Row="2" Orientation="Horizontal" HorizontalAlignment="Right">
+            <TextBlock HorizontalAlignment="Right" Margin="5 0" Text="{Binding Width, ElementName=MyWindow}" ></TextBlock>
+            <TextBlock HorizontalAlignment="Right" Margin="5 0" Text="{Binding Height, ElementName=MyWindow}" ></TextBlock>
+        </StackPanel>
+
     </Grid>
 </Window>
+        

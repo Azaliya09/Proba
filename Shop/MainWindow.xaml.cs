@@ -14,6 +14,7 @@ using System.Windows.Navigation;
 using System.Windows.Shapes;
 using Shop.Base;
 using Shop.Components;
+using Shop.Pages;
 
 namespace Shop
 {
@@ -25,11 +26,14 @@ namespace Shop
         public MainWindow()
         {
             InitializeComponent();
-            IEnumerable<Product> ListWithItem = App.db.Product;
-            foreach (var service in ListWithItem)
-            {
-                ServicesWp.Children.Add(new ProductUserControl(service));
-            }
+            Navigation.mainWindow = this;
+            LogoImage.Source = new BitmapImage(new Uri(@"\Resources\pngwing.png", UriKind.Relative));
+            MainFrame.Navigate(new ProductList());
+
+        }
+        private void AuthBtn_Click(object sender, RoutedEventArgs e)
+        {
+            MainFrame.Navigate(new AuthorizatePagexaml());
         }
     }
 }

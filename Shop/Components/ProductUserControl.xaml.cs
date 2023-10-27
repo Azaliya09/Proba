@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -31,6 +32,15 @@ namespace Shop.Components
             CostTimeTb.Visibility = product.CostVisibility;
             CostTimeTb.Text = product.Cost.ToString("N0");
             
+        }
+        private ImageSource GetImage(byte[] mainImage)
+        {
+            MemoryStream stream = new MemoryStream(mainImage);
+            BitmapImage img = new BitmapImage();
+            img.BeginInit();
+            img.StreamSource = stream;
+            img.EndInit();
+            return img;
         }
     }
 }

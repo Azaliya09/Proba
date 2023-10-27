@@ -10,11 +10,11 @@ none
 false
 DEBUG;TRACE
 C:\Users\212118\source\repos\Proba\Shop\App.xaml
-2927444540
+5-696610276
 2-2013652905
-13-436826646
+171448816682
 19-840976168
-Components\ProductUserControl.xaml;MainWindow.xaml;
+Components\ProductUserControl.xaml;MainWindow.xaml;Pages\AddEditPage.xaml;Pages\AuthorizatePagexaml.xaml;Pages\ProductList.xaml;
 
 False
 

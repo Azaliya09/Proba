@@ -24,3 +24,9 @@ C:\Users\212118\Source\Repos\Proba\Shop\bin\Debug\ru\EntityFramework.resources.d
 C:\Users\212118\Source\Repos\Proba\Shop\obj\Debug\Shop_Content.g.cs
 C:\Users\212118\Source\Repos\Proba\Shop\obj\Debug\Shop.csproj.CopyComplete
 C:\Users\212118\Source\Repos\Proba\Shop\obj\Debug\App.baml
+C:\Users\212118\source\repos\Proba\Shop\obj\Debug\Pages\AddEditPage.g.cs
+C:\Users\212118\source\repos\Proba\Shop\obj\Debug\Pages\AuthorizatePagexaml.g.cs
+C:\Users\212118\source\repos\Proba\Shop\obj\Debug\Pages\ProductList.g.cs
+C:\Users\212118\source\repos\Proba\Shop\obj\Debug\Pages\AddEditPage.baml
+C:\Users\212118\source\repos\Proba\Shop\obj\Debug\Pages\AuthorizatePagexaml.baml
+C:\Users\212118\source\repos\Proba\Shop\obj\Debug\Pages\ProductList.baml

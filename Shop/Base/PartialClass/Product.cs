@@ -49,5 +49,14 @@ namespace Shop.Base
                     return $"★{(sum / Feedback.Count()).ToString("N2")}  {Feedback.Count()} отзывов";
             }
         }
+        public string GetImage
+        {
+            get
+            {
+                string g = "\u005c" + MainImagePath.Replace(' ', '\0').Replace('/', '\u005c');
+
+                return g;
+            }
+        }
     }
 }
