@@ -11,9 +11,9 @@ namespace Shop.Components
     {
         public static MainWindow mainWindow = new MainWindow();
 
-        public void NextPage(string NamePage)
+        public static void NextPage(string NamePage)
         {
-            if (NamePage == "Авторизация" || NamePage == "Редактирование")
+            if (NamePage == "Авторизация" )
             {
                 App.isAdmin = false;
                 App.isUser = false;

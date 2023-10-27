@@ -118,7 +118,7 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Pages\ProductList.xaml">
+    <Page Include="Pages\Filter.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -130,8 +130,8 @@
     <Compile Include="Pages\AuthorizatePagexaml.xaml.cs">
       <DependentUpon>AuthorizatePagexaml.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Pages\ProductList.xaml.cs">
-      <DependentUpon>ProductList.xaml</DependentUpon>
+    <Compile Include="Pages\Filter.xaml.cs">
+      <DependentUpon>Filter.xaml</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs">
       <SubType>Code</SubType>

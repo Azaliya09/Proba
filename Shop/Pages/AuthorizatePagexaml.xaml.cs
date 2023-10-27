@@ -27,7 +27,7 @@ namespace Shop.Pages
 
         private void VhodBtn_Click(object sender, RoutedEventArgs e)
         {
-            App.mainWindow.MainFrame.Navigate(new ProductList());
+            App.mainWindow.MainFrame.Navigate(new Filter()) ;
         }
     }
 }
