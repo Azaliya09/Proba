@@ -14,13 +14,6 @@
         </Grid.RowDefinitions>
         <Image x:Name="LogoImage" HorizontalAlignment="Center" Grid.Row="0" VerticalAlignment="Center" ></Image>
 
-        <Button Width="100" Height="30" HorizontalAlignment="Left" Margin="15" x:Name="AuthBtn" Click="AuthBtn_Click">Авторизация
-            <Button.Resources>
-                <Style TargetType="Border">
-                    <Setter Property="CornerRadius" Value="5"/>
-                </Style>
-            </Button.Resources>
-        </Button>
         <Button Width="100" Height="30" HorizontalAlignment="Left" Margin="15" x:Name="ExitBtn" Visibility="Collapsed">Выйти
             <Button.Resources>
                 <Style TargetType="Border">

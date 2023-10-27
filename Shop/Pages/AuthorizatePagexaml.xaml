@@ -9,6 +9,14 @@
       Title="AuthorizatePagexaml">
 
     <Grid>
-        
+        <StackPanel Orientation="Vertical" VerticalAlignment="Center">
+            <TextBlock Margin="15" HorizontalAlignment="Center">Авторизация</TextBlock>
+            
+            <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+                <TextBlock Margin="15 0">Пароль: </TextBlock>
+                <PasswordBox Width="200"></PasswordBox>
+            </StackPanel>
+            <Button x:Name="VhodBtn" Margin="10" Width="100" Click="VhodBtn_Click">Войти</Button>
+        </StackPanel>
     </Grid>
 </Page>

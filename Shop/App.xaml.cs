@@ -17,5 +17,6 @@ namespace Shop
         public static HardwareShop_azaliyaEntities db = new HardwareShop_azaliyaEntities();
         internal static bool isAdmin;
         internal static bool isUser;
+        public static MainWindow mainWindow;
     }
 }

@@ -26,14 +26,11 @@ namespace Shop
         public MainWindow()
         {
             InitializeComponent();
-            Navigation.mainWindow = this;
+            App.mainWindow = this;
             LogoImage.Source = new BitmapImage(new Uri(@"\Resources\pngwing.png", UriKind.Relative));
-            MainFrame.Navigate(new ProductList());
+            MainFrame.Navigate(new AuthorizatePagexaml());
 
         }
-        private void AuthBtn_Click(object sender, RoutedEventArgs e)
-        {
-            MainFrame.Navigate(new AuthorizatePagexaml());
-        }
+
     }
 }

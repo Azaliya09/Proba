@@ -18,7 +18,7 @@ namespace Shop.Components
                 App.isAdmin = false;
                 App.isUser = false;
                 mainWindow.ExitBtn.Visibility = System.Windows.Visibility.Collapsed;
-                mainWindow.AuthBtn.Visibility = System.Windows.Visibility.Collapsed;
+                //mainWindow.AuthBtn.Visibility = System.Windows.Visibility.Collapsed;
                 if (NamePage == "Редактирование")
                     mainWindow.MainFrame.Navigate(new AddEditPage());
                 else
@@ -27,7 +27,7 @@ namespace Shop.Components
             else if (NamePage == "Список")
             {
                 mainWindow.ExitBtn.Visibility = System.Windows.Visibility.Collapsed;
-                mainWindow.AuthBtn.Visibility = System.Windows.Visibility.Collapsed;
+                //mainWindow.AuthBtn.Visibility = System.Windows.Visibility.Collapsed;
             }
 
         }
