@@ -25,13 +25,15 @@ namespace Shop.Components
         public ProductUserControl(Product product)
         {
             InitializeComponent();
+            if (product.MainImage != null)
+                ImageImg.Source = GetImage(product.MainImage);
 
             TitleTb.Text = product.Title;
             EvolutionTb.Text = product.OverideFeedback;
             CostTb.Text = product.CostDiscount.ToString("N0") + " ₽ ";
             CostTimeTb.Visibility = product.CostVisibility;
             CostTimeTb.Text = product.Cost.ToString("N0");
-            
+
         }
         private ImageSource GetImage(byte[] mainImage)
         {

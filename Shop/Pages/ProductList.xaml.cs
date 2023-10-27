@@ -2,6 +2,7 @@
 using Shop.Components;
 using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -26,7 +27,7 @@ namespace Shop.Pages
         {
             InitializeComponent();
             IEnumerable<Product> productSortList = App.db.Product;
-            //string OnePath = "C:\\Users\\8 987 229 30-84\\Desktop\\Магазин техники\\";
+            //string OnePath = "C:\\Users\\212118\\Desktop\\Магазин техники\\";
             foreach (var product in productSortList)
             {
                 //product.MainImage = File.ReadAllBytes(OnePath + product.MainImagePath);
