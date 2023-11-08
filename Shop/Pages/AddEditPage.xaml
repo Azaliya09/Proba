@@ -16,7 +16,7 @@
                     <Border BorderBrush="LightGray" BorderThickness="2">
                         <Image Source="{Binding MainImage}" x:Name="ImageImg" Height="150"></Image>
                     </Border>
-                    <Button x:Name="EditImageBtn">Изменить изображение</Button>
+                    <Button x:Name="EditImageBtn" Click="EditImageBtn_Click">Изменить изображение</Button>
                 </StackPanel>
             </StackPanel>
             <StackPanel Margin="30 0">
@@ -41,7 +41,7 @@
                     <TextBox  Width="150" Height="20" Text="{Binding Discount}"></TextBox>
                 </StackPanel>
                 <StackPanel>
-                    <Button x:Name="SaveBtn">Сохранить</Button>
+                    <Button x:Name="SaveBtn" Click="SaveBtn_Click">Сохранить</Button>
                 </StackPanel>
             </StackPanel>
 

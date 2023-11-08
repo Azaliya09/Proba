@@ -1,5 +1,9 @@
-﻿using System;
+﻿using Microsoft.Win32;
+using Shop.Base;
+using Shop.Components;
+using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -20,9 +24,50 @@ namespace Shop.Pages
     /// </summary>
     public partial class AddEditPage : Page
     {
-        public AddEditPage()
+        private Product product;
+        public AddEditPage(Product product)
         {
             InitializeComponent();
+        }
+
+        private void SaveBtn_Click(object sender, RoutedEventArgs e)
+        {
+            StringBuilder error = new StringBuilder();
+            if (product.Id == 0)
+            {
+                Product newService = App.db.Product.Add(product);
+                if (App.db.Product.Any(x => x.Title == product.Title))
+                    error.AppendLine("Товар с таким именем уже существует! ");
+
+            }
+            else
+            {
+                App.db.Product.Add(product);
+            }
+
+            if (error.Length > 0)
+            {
+                MessageBox.Show(error.ToString());
+                return;
+            }
+            App.db.SaveChanges();
+            MessageBox.Show("Сохранено!");
+            Navigation.NextPage(new PageComponent("Список товаров", new Filter()));
+        }
+
+        private void EditImageBtn_Click(object sender, RoutedEventArgs e)
+        {
+            OpenFileDialog openFile = new OpenFileDialog()
+            {
+                Filter = "*.png|*.png|*.jpeg|*.jpeg|*.jpg|*.jpg"
+            };
+            openFile.ShowDialog();
+            if (openFile.FileName != null)
+            {
+                product.MainImage = File.ReadAllBytes(openFile.FileName);
+                ImageImg.Source = new BitmapImage(new Uri(openFile.FileName));
+            }
+
         }
     }
 }

@@ -8,26 +8,16 @@
         Title="MainWindow" Height="450" Width="800">
     <Grid>
         <Grid.RowDefinitions>
-            <RowDefinition Height="69*"/>
-            <RowDefinition Height="449*"/>
-            <RowDefinition Height="16*"/>
+            <RowDefinition Height="55*"/>
+            <RowDefinition Height="379*"/>
         </Grid.RowDefinitions>
-        <Image x:Name="LogoImage" HorizontalAlignment="Center" Grid.Row="0" VerticalAlignment="Center" ></Image>
-
-        <Button Width="100" Height="30" HorizontalAlignment="Left" Margin="15" x:Name="ExitBtn" Visibility="Collapsed">Выйти
-            <Button.Resources>
-                <Style TargetType="Border">
-                    <Setter Property="CornerRadius" Value="5"/>
-                </Style>
-            </Button.Resources>
-        </Button>
-
-        <Frame x:Name="MainFrame" Grid.Row="1" NavigationUIVisibility="Hidden" />
-        <StackPanel Grid.Row="2" Orientation="Horizontal" HorizontalAlignment="Right">
-            <TextBlock HorizontalAlignment="Right" Margin="5 0" Text="{Binding Width, ElementName=MyWindow}" ></TextBlock>
-            <TextBlock HorizontalAlignment="Right" Margin="5 0" Text="{Binding Height, ElementName=MyWindow}" ></TextBlock>
+        
+        <Rectangle Fill="#FFAEE1FF" Grid.ColumnSpan="2"></Rectangle>
+        <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" VerticalAlignment="Center">
+           <Image x:Name="LogoImage" Source="/Resources/shop.png" Margin="3"></Image>
+            <TextBlock x:Name="TitleTb" Grid.Column="1" FontSize="25"  VerticalAlignment="Center">Магазин техники</TextBlock>
         </StackPanel>
-
+        <Frame x:Name="MainFrame" Grid.Row="1" NavigationUIVisibility="Hidden"></Frame> 
     </Grid>
 </Window>
         

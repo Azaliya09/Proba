@@ -26,11 +26,12 @@ namespace Shop
         public MainWindow()
         {
             InitializeComponent();
-            App.mainWindow = this;
-            LogoImage.Source = new BitmapImage(new Uri(@"\Resources\pngwing.png", UriKind.Relative));
+            Navigation.mainWindow = this;
+            
             MainFrame.Navigate(new AuthorizatePagexaml());
-
+            Navigation.NextPage(new PageComponent("Авторизация", new AuthorizatePagexaml()));
         }
 
     }
 }
+    

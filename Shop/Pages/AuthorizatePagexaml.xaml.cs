@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Shop.Components;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -27,7 +28,7 @@ namespace Shop.Pages
 
         private void VhodBtn_Click(object sender, RoutedEventArgs e)
         {
-            App.mainWindow.MainFrame.Navigate(new Filter()) ;
+            Navigation.NextPage(new PageComponent("Список товаров", new Shop.Pages.Filter()));
         }
     }
 }

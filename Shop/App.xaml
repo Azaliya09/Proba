@@ -6,6 +6,22 @@
     <Application.Resources>
         <Style TargetType="TextBlock">
             <Setter Property="FontSize" Value="14"></Setter>
+            <Setter Property="FontFamily" Value="Comic Sans MS"></Setter>
+        </Style>
+        <Style TargetType="Button">
+            <Setter Property="Margin" Value="5"></Setter>
+            <Setter Property="Background" Value="#FFAEE1FF"></Setter>
+            <Setter Property="Foreground" Value="Black"></Setter>
+        </Style>
+        <Style TargetType="ComboBox">
+            <Setter Property="Width" Value="180"></Setter>
+            <Setter Property="Height" Value="35"></Setter>
+            <Setter Property="Margin" Value="3"></Setter>
+        </Style>
+        <Style TargetType="TextBox">
+            <Setter Property="Width" Value="180"></Setter>
+            <Setter Property="Height" Value="35"></Setter>
+            <Setter Property="Margin" Value="3"></Setter>
         </Style>
     </Application.Resources>
 </Application>

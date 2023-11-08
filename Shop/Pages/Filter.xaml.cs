@@ -25,15 +25,10 @@ namespace Shop.Pages
         public Filter()
         {
             InitializeComponent();
-            if (App.isAdmin == false)
-            {
-                AddBtn.Visibility = Visibility.Hidden;
-            }
-            Refresh();
         }
-
         private void Refresh()
         {
+
             IEnumerable<Product> serviceSortList = App.db.Product;
             if (SortCb.SelectedIndex > 0)
             {
@@ -88,7 +83,7 @@ namespace Shop.Pages
 
         private void AddBtn_Click(object sender, RoutedEventArgs e)
         {
-            Navigation.NextPage("Редактирование");
+            Navigation.NextPage(new PageComponent("Добавление товара", new AddEditPage(new Product())));
 
         }
     }

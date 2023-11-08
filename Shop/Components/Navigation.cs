@@ -3,33 +3,35 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Controls;
 using Shop.Pages;
 
 namespace Shop.Components
 {
     public class Navigation
     {
-        public static MainWindow mainWindow = new MainWindow();
-
-        public static void NextPage(string NamePage)
+        private static List<PageComponent> components = new List<PageComponent>();//храним историю
+        public static MainWindow mainWindow;//получаем доступ ко всем элементам
+        private static void Update(PageComponent pageComponent)//принимает компонент к-й мы хотим открыть
         {
-            if (NamePage == "Авторизация" )
-            {
-                App.isAdmin = false;
-                App.isUser = false;
-                mainWindow.ExitBtn.Visibility = System.Windows.Visibility.Collapsed;
-                //mainWindow.AuthBtn.Visibility = System.Windows.Visibility.Collapsed;
-                if (NamePage == "Редактирование")
-                    mainWindow.MainFrame.Navigate(new AddEditPage());
-                else
-                    mainWindow.MainFrame.Navigate(new AuthorizatePagexaml());
-            }
-            else if (NamePage == "Список")
-            {
-                mainWindow.ExitBtn.Visibility = System.Windows.Visibility.Collapsed;
-                //mainWindow.AuthBtn.Visibility = System.Windows.Visibility.Collapsed;
-            }
+            mainWindow.TitleTb.Text = pageComponent.Title;//записывает заголок
+            mainWindow.MainFrame.Navigate(pageComponent.Page);//открываем страницу
+        }
+        public static void NextPage(PageComponent pageComponent)
+        {
+            components.Add(pageComponent);//добавление нового окна
+            Update(pageComponent);
+        }
 
+    }
+    public class PageComponent  //хранит заголовок и страницу
+    {
+        public string Title { get; set; }
+        public Page Page { get; set; }
+        public PageComponent(string title, Page page)
+        {
+            Page = page;
+            Title = title;
         }
     }
 }
