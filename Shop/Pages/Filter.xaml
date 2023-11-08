@@ -20,8 +20,8 @@
                 <ComboBoxItem>По возрастанию</ComboBoxItem>
                 <ComboBoxItem>По убыванию</ComboBoxItem>
             </ComboBox>
-            <TextBlock Width="70" Height="40">По скидке</TextBlock>
-            <ComboBox Width="150" Height="40"  x:Name="DiscountFilterCb" SelectionChanged="DiscountFilterCb_SelectionChanged">
+            <TextBlock  Height="40">По скидке</TextBlock>
+            <ComboBox Height="40"  x:Name="DiscountFilterCb" SelectionChanged="DiscountFilterCb_SelectionChanged">
                 <ComboBoxItem>Все</ComboBoxItem>
                 <ComboBoxItem>от 0% до 5%</ComboBoxItem>
                 <ComboBoxItem>от 5% до 15%</ComboBoxItem>
@@ -29,11 +29,11 @@
                 <ComboBoxItem>от 30% до 70%</ComboBoxItem>
                 <ComboBoxItem>от 70% до 100%</ComboBoxItem>
             </ComboBox>
-            <TextBlock Width="190" Height="40">По названию или описанию</TextBlock>
-            <TextBox Width="150" Height="40"  x:Name="SearchTb" TextChanged="SearchTb_TextChanged"></TextBox>
+            <TextBlock  Height="40">По названию или описанию</TextBlock>
+            <TextBox  Height="40"  x:Name="SearchTb" TextChanged="SearchTb_TextChanged"></TextBox>
         </StackPanel>
         <ScrollViewer HorizontalScrollBarVisibility="Disabled" Grid.Row="1">
-            <WrapPanel x:Name="ServicesWp"/>
+            <WrapPanel x:Name="ProductsWp"/>
         </ScrollViewer>
 
         <StackPanel Grid.Row="2" Orientation="Horizontal" HorizontalAlignment="Center">
