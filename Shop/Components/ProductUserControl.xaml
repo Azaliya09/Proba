@@ -5,41 +5,45 @@
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:Shop.Components"
              mc:Ignorable="d" 
-             d:DesignHeight="400" d:DesignWidth="300">
+             d:DesignHeight="500" d:DesignWidth="300">
 
-    <Border x:Name="MainBorder" BorderBrush="LightGray" BorderThickness="2" Margin="2" Width="280" Height="380">
+    <Border x:Name="MainBorder" BorderBrush="LightGray" BorderThickness="2" Margin="2" Width="280" Height="480">
         <Grid Margin="5">
             <Grid.RowDefinitions>
-                <RowDefinition Height="202*"/>
-                <RowDefinition Height="39*"/>
-                <RowDefinition Height="21*"/>
-                <RowDefinition Height="42*"/>
-                <RowDefinition Height="62*"/>
+                <RowDefinition Height="230*"/>
+                <RowDefinition Height="44*"/>
+                <RowDefinition Height="24*"/>
+                <RowDefinition Height="48*"/>
+                <RowDefinition Height="45*"/>
+                <RowDefinition Height="25*"/>
             </Grid.RowDefinitions>
 
 
 
             <Image Margin="5,5,5,1" x:Name="ImageImg" Source="/Resources/love.png" />
             <TextBlock x:Name="TitleTb" TextWrapping="Wrap" Margin="0,0,0,1" Grid.Row="1" />
-            <StackPanel Grid.Row="2" Orientation="Horizontal" Margin="0,0,0,4">
+            <StackPanel Grid.Row="2" Orientation="Horizontal" Margin="0,0,0,54" Grid.RowSpan="2">
                 <TextBlock  x:Name="EvolutionTb"></TextBlock>
             </StackPanel>
-            <StackPanel Grid.Row="3" Orientation="Horizontal" Margin="0,0,0,45" Grid.RowSpan="2">
+            <StackPanel Grid.Row="3" Orientation="Horizontal">
                 <TextBlock x:Name="CostTb" FontWeight="Bold" FontSize="24" VerticalAlignment="Center"></TextBlock>
                 <TextBlock x:Name="CostTimeTb" FontSize="14" VerticalAlignment="Center" TextDecorations="Strikethrough"></TextBlock>
             </StackPanel>
-            <StackPanel  Orientation="Horizontal" HorizontalAlignment="Center" Grid.Row="4" Margin="0,7,0,8" Width="180">
-                <Button x:Name="BuyBtn" Background="White" BorderBrush="White" Width="60">
+            <StackPanel  Orientation="Horizontal" HorizontalAlignment="Center" Grid.Row="3" Margin="0,47,0,22" Width="180" Grid.RowSpan="3">
+                <Button x:Name="BuyBtn" Background="White" BorderBrush="White" Width="50" Click="BuyBtn_Click">
                     <Image Source="/Resources/buy1.png"></Image>
                 </Button>
-                <Button x:Name="LoveBtn" Background="White" BorderBrush="White" Width="60">
+                <Button x:Name="LoveBtn" Background="White" BorderBrush="White" Width="40">
                     <Image Source="/Resources/love.png"></Image>
                 </Button>
-                <Button x:Name="StatisticBtn" Background="White" BorderBrush="White" Width="60">
+                <Button x:Name="StatisticBtn" Background="White" BorderBrush="White" Width="40">
                     <Image Source="/Resources/statistic.png"></Image>
                 </Button>
             </StackPanel>
-
+            <StackPanel Grid.Row="4" Orientation="Horizontal" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,46,0,0" Grid.RowSpan="2">
+                <Button x:Name="EditBtn" Width="100" Click="EditBtn_Click">Редактировать</Button>
+                <Button x:Name="DeleteBtn" Width="100" Click="DeleteBtn_Click">Удалить</Button>
+            </StackPanel>
         </Grid>
     </Border>
 </UserControl>

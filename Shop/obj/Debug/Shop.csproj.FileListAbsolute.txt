@@ -30,3 +30,5 @@ C:\Users\212118\source\repos\Proba\Shop\obj\Debug\Pages\AddEditPage.baml
 C:\Users\212118\source\repos\Proba\Shop\obj\Debug\Pages\AuthorizatePagexaml.baml
 C:\Users\212118\source\repos\Proba\Shop\obj\Debug\Pages\Filter.g.cs
 C:\Users\212118\source\repos\Proba\Shop\obj\Debug\Pages\Filter.baml
+C:\Users\212118\source\repos\Proba\Shop\obj\Debug\Pages\BasketPage.g.cs
+C:\Users\212118\source\repos\Proba\Shop\obj\Debug\Pages\BasketPage.baml

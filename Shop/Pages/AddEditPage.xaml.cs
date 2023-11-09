@@ -25,9 +25,11 @@ namespace Shop.Pages
     public partial class AddEditPage : Page
     {
         private Product product;
-        public AddEditPage(Product product)
+        public AddEditPage(Product _product)
         {
             InitializeComponent();
+            product = _product;
+            this.DataContext = product;
         }
 
         private void SaveBtn_Click(object sender, RoutedEventArgs e)
@@ -40,15 +42,15 @@ namespace Shop.Pages
                     error.AppendLine("Товар с таким именем уже существует! ");
 
             }
-            else
-            {
-                App.db.Product.Add(product);
-            }
 
             if (error.Length > 0)
             {
                 MessageBox.Show(error.ToString());
                 return;
+            }
+            if (product.Id == 0)
+            {
+                App.db.Product.Add(product);
             }
             App.db.SaveChanges();
             MessageBox.Show("Сохранено!");

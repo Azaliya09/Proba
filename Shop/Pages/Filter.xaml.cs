@@ -87,5 +87,10 @@ namespace Shop.Pages
             Navigation.NextPage(new PageComponent("Добавление товара", new AddEditPage(new Product())));
 
         }
+
+        private void BasketBtn_Click(object sender, RoutedEventArgs e)
+        {
+            Navigation.NextPage(new PageComponent("Корзина", new BasketPage(null)));
+        }
     }
 }
