@@ -1,6 +1,9 @@
 {
   "ExpandedNodes": [
-    ""
+    "",
+    "\\Shop",
+    "\\Shop\\Pages"
   ],
+  "SelectedNode": "\\Shop\\Pages\\Filter.xaml.cs",
   "PreviewInSolutionExplorer": false
 }

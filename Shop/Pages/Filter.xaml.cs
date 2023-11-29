@@ -64,8 +64,9 @@ namespace Shop.Pages
             }
             ProductsWp.Children.Clear();
             foreach (var product in productSortList)
-                ProductsWp.Children.Add(new ProductUserControl(product));
-              
+            ProductsWp.Children.Add(new ProductUserControl(product));
+            CountDataTb.Text = productSortList.Count() + " из " + App.db.Product.Count();
+
         }
         private void SortCb_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {

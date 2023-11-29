@@ -13,10 +13,10 @@
             <ListView.View>
                 <GridView>
                     <GridView.Columns>
-                        <GridViewColumn Width="180" Header="Наименование товара" DisplayMemberBinding="{Binding Product.Title}"/>
-                        <GridViewColumn Width="120" Header="Стоимость" DisplayMemberBinding="{Binding Product.Cost}"/>
-                        <GridViewColumn Width="180" Header="Описание" DisplayMemberBinding="{Binding Product.Description}"/>
-                        <GridViewColumn Width="120" Header="Скидка" DisplayMemberBinding="{Binding Product.Discount}"/>
+                        <GridViewColumn Width="180" Header="Наименование товара" DisplayMemberBinding="{Binding Title}"/>
+                        <GridViewColumn Width="120" Header="Стоимость" DisplayMemberBinding="{Binding Cost}"/>
+                        <GridViewColumn Width="180" Header="Описание" DisplayMemberBinding="{Binding Description}"/>
+                        <GridViewColumn Width="120" Header="Скидка" DisplayMemberBinding="{Binding Discount}"/>
                     </GridView.Columns>
                 </GridView>
             </ListView.View>

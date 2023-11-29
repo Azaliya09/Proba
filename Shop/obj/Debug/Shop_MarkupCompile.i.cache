@@ -4,17 +4,17 @@
 winexe
 C#
 .cs
-C:\Users\212118\source\repos\Proba\Shop\obj\Debug\
+C:\Users\212118\Source\Repos\Proba\Shop\obj\Debug\
 Shop
 none
 false
 DEBUG;TRACE
-C:\Users\212118\source\repos\Proba\Shop\App.xaml
+C:\Users\212118\Source\Repos\Proba\Shop\App.xaml
 6-286007124
 2-2013652905
-19719062880
-19-840976168
+21-1529452837
+19-1505186216
 Components\ProductUserControl.xaml;MainWindow.xaml;Pages\AddEditPage.xaml;Pages\AuthorizatePagexaml.xaml;Pages\BasketPage.xaml;Pages\Filter.xaml;
 
-True
+False
 

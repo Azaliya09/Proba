@@ -28,6 +28,15 @@ namespace Shop.Pages
 
         private void VhodBtn_Click(object sender, RoutedEventArgs e)
         {
+            if(PasswordPb.Password == "0000")
+            {
+                App.IsAdmin = true;
+                MessageBox.Show("Вы вошли как администратор!");
+            }
+            else
+            {
+                MessageBox.Show("Добро пожаловать, гость!");
+            }
             Navigation.NextPage(new PageComponent("Список товаров", new Shop.Pages.Filter()));
         }
     }

@@ -32,13 +32,15 @@
             <TextBlock  Height="40">По названию или описанию</TextBlock>
             <TextBox  Height="40"  x:Name="SearchTb" TextChanged="SearchTb_TextChanged"></TextBox>
         </StackPanel>
-        <ScrollViewer HorizontalScrollBarVisibility="Disabled" Grid.Row="1">
-            <WrapPanel x:Name="ProductsWp"/>
-        </ScrollViewer>
+        <ItemsControl  Grid.Row="1">
+            <ScrollViewer HorizontalScrollBarVisibility="Disabled">
+                <WrapPanel x:Name="ProductsWp"/>
+            </ScrollViewer>
+        </ItemsControl>
 
         <StackPanel Grid.Row="2" Orientation="Horizontal" HorizontalAlignment="Center">
             <Button Width="100" Height="30" HorizontalAlignment="Center" x:Name="AddBtn" Grid.Row="2" Click="AddBtn_Click">Добавить</Button>
-            <TextBlock Margin="20 0" x:Name="CountDataTb"></TextBlock>
+            <TextBlock HorizontalAlignment="Center" VerticalAlignment="Center" Margin="20 0" x:Name="CountDataTb"></TextBlock>
             <Button Width="100" Height="30" HorizontalAlignment="Center" x:Name="BasketBtn" Grid.Row="2" Click="BasketBtn_Click">Корзина</Button>
         </StackPanel>
     </Grid>

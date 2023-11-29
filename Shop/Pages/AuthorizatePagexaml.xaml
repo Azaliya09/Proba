@@ -14,7 +14,7 @@
             
             <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
                 <TextBlock Margin="15 0">Пароль: </TextBlock>
-                <PasswordBox Width="200"></PasswordBox>
+                <PasswordBox x:Name="PasswordPb" Width="200"></PasswordBox>
             </StackPanel>
             <Button x:Name="VhodBtn" Margin="10" Width="100" Click="VhodBtn_Click">Войти</Button>
         </StackPanel>

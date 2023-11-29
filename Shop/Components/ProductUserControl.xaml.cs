@@ -24,10 +24,16 @@ namespace Shop.Components
     public partial class ProductUserControl : UserControl
     {
         private Product product;
+       List<Product> productSortList = new List<Product>();
         public ProductUserControl(Product _product)
         {
             InitializeComponent();
             this.product = _product;
+            if (App.IsAdmin == false)
+            {
+                EditBtn.Visibility = Visibility.Hidden;
+                DeleteBtn.Visibility = Visibility.Hidden;
+            }
             if (product.MainImage != null)
                 ImageImg.Source = GetImage(product.MainImage);
 
@@ -36,7 +42,7 @@ namespace Shop.Components
             CostTb.Text = product.CostDiscount.ToString("N0") + " ₽ ";
             CostTimeTb.Visibility = product.CostVisibility;
             CostTimeTb.Text = product.Cost.ToString("N0");
-
+            App.selectedProduct = this.product;
         }
         private ImageSource GetImage(byte[] mainImage)
         {
@@ -69,7 +75,8 @@ namespace Shop.Components
         }
         private void BuyBtn_Click(object sender, RoutedEventArgs e)
         {
-            Navigation.NextPage(new PageComponent("Корзина", new BasketPage(product)));
+            productSortList.Add(product);
+            MessageBox.Show("Товар добавлен в корзину!!");
         }
     }
 }

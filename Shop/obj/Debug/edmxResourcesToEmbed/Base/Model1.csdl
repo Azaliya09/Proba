@@ -23,6 +23,8 @@
     <Property Name="MainImage" Type="Binary" MaxLength="Max" FixedLength="false" />
     <Property Name="MainImagePath" Type="String" MaxLength="1000" FixedLength="false" Unicode="true" />
     <NavigationProperty Name="Feedback" Relationship="Self.FK_Feedback_Product" FromRole="Product" ToRole="Feedback" />
+    <Property Name="IsDelete" Type="Boolean" />
+    <NavigationProperty Name="OrderProduct" Relationship="HardwareShop_azaliyaModel.FK_OrderProduct_Product" FromRole="Product" ToRole="OrderProduct" />
   </EntityType>
   <EntityType Name="sysdiagrams">
     <Key>
@@ -54,5 +56,59 @@
       <End Role="Product" EntitySet="Product" />
       <End Role="Feedback" EntitySet="Feedback" />
     </AssociationSet>
+    <EntitySet Name="Order" EntityType="HardwareShop_azaliyaModel.Order" />
+    <EntitySet Name="OrderProduct" EntityType="HardwareShop_azaliyaModel.OrderProduct" />
+    <AssociationSet Name="FK_OrderProduct_Order" Association="HardwareShop_azaliyaModel.FK_OrderProduct_Order">
+      <End Role="Order" EntitySet="Order" />
+      <End Role="OrderProduct" EntitySet="OrderProduct" />
+    </AssociationSet>
+    <AssociationSet Name="FK_OrderProduct_Product" Association="HardwareShop_azaliyaModel.FK_OrderProduct_Product">
+      <End Role="Product" EntitySet="Product" />
+      <End Role="OrderProduct" EntitySet="OrderProduct" />
+    </AssociationSet>
   </EntityContainer>
+  <EntityType Name="Order">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" />
+    <Property Name="Date" Type="DateTime" Precision="0" />
+    <Property Name="Status" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="OrderProduct" Relationship="HardwareShop_azaliyaModel.FK_OrderProduct_Order" FromRole="Order" ToRole="OrderProduct" />
+  </EntityType>
+  <EntityType Name="OrderProduct">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" />
+    <Property Name="Id_Product" Type="Int32" />
+    <Property Name="Id_Order" Type="Int32" />
+    <Property Name="Count" Type="Int32" />
+    <NavigationProperty Name="Order" Relationship="HardwareShop_azaliyaModel.FK_OrderProduct_Order" FromRole="OrderProduct" ToRole="Order" />
+    <NavigationProperty Name="Product" Relationship="HardwareShop_azaliyaModel.FK_OrderProduct_Product" FromRole="OrderProduct" ToRole="Product" />
+  </EntityType>
+  <Association Name="FK_OrderProduct_Order">
+    <End Type="HardwareShop_azaliyaModel.Order" Role="Order" Multiplicity="0..1" />
+    <End Type="HardwareShop_azaliyaModel.OrderProduct" Role="OrderProduct" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Order">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="OrderProduct">
+        <PropertyRef Name="Id_Order" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_OrderProduct_Product">
+    <End Type="HardwareShop_azaliyaModel.Product" Role="Product" Multiplicity="0..1" />
+    <End Type="HardwareShop_azaliyaModel.OrderProduct" Role="OrderProduct" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Product">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="OrderProduct">
+        <PropertyRef Name="Id_Product" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
 </Schema>

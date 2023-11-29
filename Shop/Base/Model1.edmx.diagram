@@ -9,6 +9,10 @@
         <EntityTypeShape EntityType="HardwareShop_azaliyaModel.Product" Width="1.5" PointX="0.75" PointY="1" IsExpanded="true" />
         <EntityTypeShape EntityType="HardwareShop_azaliyaModel.sysdiagrams" Width="1.5" PointX="0.75" PointY="4.75" IsExpanded="true" />
         <AssociationConnector Association="HardwareShop_azaliyaModel.FK_Feedback_Product" ManuallyRouted="false" />
+        <EntityTypeShape EntityType="HardwareShop_azaliyaModel.Order" Width="1.5" PointX="0.75" PointY="7.625" />
+        <EntityTypeShape EntityType="HardwareShop_azaliyaModel.OrderProduct" Width="1.5" PointX="3" PointY="4.375" />
+        <AssociationConnector Association="HardwareShop_azaliyaModel.FK_OrderProduct_Order" />
+        <AssociationConnector Association="HardwareShop_azaliyaModel.FK_OrderProduct_Product" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>
