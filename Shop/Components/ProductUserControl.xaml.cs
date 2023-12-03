@@ -37,17 +37,19 @@ namespace Shop.Components
             if (product.MainImage != null)
                 ImageImg.Source = GetImage(product.MainImage);
 
+            if(product.Discount != 0)
+                BorderRec.Visibility = Visibility.Visible;
             TitleTb.Text = product.Title;
             EvolutionTb.Text = product.OverideFeedback;
-            CostTb.Text = product.CostDiscount.ToString("N0") + " ₽ ";
+            CostTb.Text = product.CostDiscount.ToString("N0") + " ₽ ";//новая цена со скидкой
             CostTimeTb.Visibility = product.CostVisibility;
-            CostTimeTb.Text = product.Cost.ToString("N0");
+            CostTimeTb.Text = product.Cost.ToString("N0");//старая цена
             App.selectedProduct = this.product;
         }
         private ImageSource GetImage(byte[] mainImage)
         {
             MemoryStream stream = new MemoryStream(mainImage);
-            BitmapImage img = new BitmapImage();
+            BitmapImage img = new BitmapImage()
             img.BeginInit();
             img.StreamSource = stream;
             img.EndInit();

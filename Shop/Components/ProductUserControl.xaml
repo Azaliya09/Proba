@@ -44,6 +44,7 @@
                 <Button x:Name="EditBtn" Width="100" Click="EditBtn_Click">Редактировать</Button>
                 <Button x:Name="DeleteBtn" Width="100" Click="DeleteBtn_Click">Удалить</Button>
             </StackPanel>
+            <Rectangle Grid.RowSpan="5" Stroke="Green" RadiusX="13.053" RadiusY="13.053" x:Name="BorderRec" Visibility="Hidden" StrokeThickness="3" Margin="-2"></Rectangle>
         </Grid>
     </Border>
 </UserControl>
